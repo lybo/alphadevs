@@ -1,0 +1,21 @@
+{
+	"type": "UserCollection",
+	"properties": {
+		"skills": {
+			"name": "skills",
+			"type": "array",
+			"typeLabel": "array",
+			"required": true,
+			"id": "skills",
+			"order": 0
+		},
+		"url": {
+			"name": "url",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "url",
+			"order": 1
+		}
+	}
+}

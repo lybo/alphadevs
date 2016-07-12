@@ -1,0 +1,21 @@
+{
+	"type": "Collection",
+	"properties": {
+		"developerId": {
+			"name": "developerId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "developerId",
+			"order": 0
+		},
+		"description": {
+			"name": "description",
+			"type": "string",
+			"typeLabel": "string",
+			"required": true,
+			"id": "description",
+			"order": 1
+		}
+	}
+}
