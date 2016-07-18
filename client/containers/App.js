@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux'
 import { Router } from 'redux-router-director'
 // import { auth } from '../middlewares/index'
+import PageLogin from './PageLogin'
 import PagePassive from './PagePassive'
 // import '!style!css!less!./main.less'
 
@@ -11,7 +12,7 @@ const Pages = ({
     return (
         <div>
             <Router pattern="" >
-                <PagePassive />
+                <PageLogin />
             </Router>
         </div>
     );
