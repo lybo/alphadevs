@@ -2,7 +2,7 @@ import * as types from '../constants/ActionTypes'
 
 const initialState = {
     id: 0,
-    email: '',
+    username: '',
     url: '',
     skills: []
 };
@@ -12,7 +12,7 @@ export default function(state = initialState, action = { type: '', payload: {} }
         case types.LOGIN:
             return {
                 id: action.payload.id,
-                email: action.payload.email,
+                username: action.payload.username,
                 skills: action.payload.skills || [],
                 url: action.payload.url || ''
             };
@@ -21,14 +21,13 @@ export default function(state = initialState, action = { type: '', payload: {} }
         case types.REGISTER:
             return {
                 id: action.payload.id,
-                email: action.payload.email,
+                username: action.payload.username,
                 skills: action.payload.skills || [],
                 url: action.payload.url || ''
             };
         case types.RESET_PASSWORD:
             return state;
-        default: 
+        default:
             return state;
-    }   
+    }
 };
-
