@@ -16,6 +16,38 @@
 			"required": false,
 			"id": "url",
 			"order": 1
+		},
+		"socialAccount": {
+			"name": "socialAccount",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "socialAccount",
+			"order": 2
+		},
+		"socialAccountId": {
+			"name": "socialAccountId",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "socialAccountId",
+			"order": 3
+		},
+		"profile": {
+			"name": "profile",
+			"type": "object",
+			"typeLabel": "object",
+			"required": false,
+			"id": "profile",
+			"order": 4
+		},
+		"name": {
+			"name": "name",
+			"type": "string",
+			"typeLabel": "string",
+			"required": false,
+			"id": "name",
+			"order": 5
 		}
 	}
 }

@@ -1,10 +1,10 @@
 import React from 'react';
-import Login from '../containers/Login';
+import LoginGithub from '../components/LoginGithub';
 
 export default () => {
     return (
         <div>
-            <Login />
+            <LoginGithub />
         </div>
     ); 
 }
