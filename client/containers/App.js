@@ -4,6 +4,7 @@ import { Router } from 'redux-router-director'
 // import { auth } from '../middlewares/index'
 import PageLogin from './PageLogin'
 import PagePassive from './PagePassive'
+import PageDashboard from './PageDashboard'
 // import '!style!css!less!./main.less'
 
 const Pages = ({
@@ -14,6 +15,12 @@ const Pages = ({
             <Router pattern="" >
                 <PageLogin />
             </Router>
+            <Router pattern="/login" >
+                <PageLogin />
+            </Router>
+            <Router pattern="/dashboard" >
+                <PageDashboard />
+            </Router>
         </div>
     );
 }
@@ -21,7 +28,7 @@ const Pages = ({
 export default connect(
     (state) => {
         return {
-            router: state.router    
+            router: state.router
         };
     },
     (dispatch) => {
