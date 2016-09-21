@@ -1,7 +1,6 @@
-import React from 'react';
 import PageDashboard from '../components/PageDashboard';
-import { connect } from 'react-redux'
-import { fetchLogout, getSkills } from '../actions/user'
+import { connect } from 'react-redux';
+import { fetchLogout, fetchSkills } from '../actions/user';
 
 export default connect(
     (state) => {
@@ -16,8 +15,8 @@ export default connect(
                 dispatch(fetchLogout());
             },
             getSkills: () => {
-                dispatch(getSkills());
+                dispatch(fetchSkills());
             }
-        }
+        };
     }
 )(PageDashboard);

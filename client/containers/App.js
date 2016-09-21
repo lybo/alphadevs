@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux'
-import { Router } from 'redux-router-director'
-import { auth } from '../middlewares/index'
-import PageLogin from './PageLogin'
-import PageDashboard from './PageDashboard'
+import { connect } from 'react-redux';
+import { Router } from 'redux-router-director';
+import { auth } from '../middlewares/index';
+import PageLogin from './PageLogin';
+import PageDashboard from './PageDashboard';
 // import '!style!css!less!./main.less'
 
 const Pages = ({
@@ -22,7 +22,7 @@ const Pages = ({
             </Router>
         </div>
     );
-}
+};
 
 export default connect(
     (state) => {

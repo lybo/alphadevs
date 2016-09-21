@@ -1,15 +1,15 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require(`path`);
+var webpack = require(`webpack`);
 
 module.exports = {
     entry: [
-        'webpack-hot-middleware/client',
-        './index'
+        `webpack-hot-middleware/client`,
+        `./index`
     ],
     output: {
-        path: path.join(__dirname, 'public/static/'),
-        filename: 'bundle.js',
-        publicPath: '/static/'
+        path: path.join(__dirname, `public/static/`),
+        filename: `bundle.js`,
+        publicPath: `/static/`
     },
     plugins: [
         new webpack.optimize.OccurenceOrderPlugin(),
@@ -27,13 +27,13 @@ module.exports = {
     module: {
         loaders: [{
             test: /\.js$/,
-            loaders: [ 'babel' ],
+            loaders: [ `babel` ],
             exclude: /node_modules/,
             include: __dirname
         }, 
         { 
             test: /\.less$/,
-            loader: 'style!css!autoprefixer!less'
+            loader: `style!css!autoprefixer!less`
         }]
     }
-}
+};

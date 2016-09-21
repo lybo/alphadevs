@@ -1,12 +1,12 @@
-var express = require('express');
+var express = require(`express`);
 var app = express();
-var fs = require('fs');
-var path = require('path');
+var fs = require(`fs`);
+var path = require(`path`);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + `/public`));
 
-app.get('/', function (req, res) {
-    fs.readFile(path.join(__dirname, 'public/index.html'), 'utf8', function (err, data) {
+app.get(`/`, function (req, res) {
+    fs.readFile(path.join(__dirname, `public/index.html`), `utf8`, function (err, data) {
         if (!err) {
             res.status(200).send(data);
         } else {
@@ -19,5 +19,5 @@ var server = app.listen(3101, function () {
     var host = server.address().address;
     var port = server.address().port;
 
-    console.log('Example app listening at http://localhost:%s', port);
+    console.log(`Example app listening at http://localhost:%s`, port);
 });

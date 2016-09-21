@@ -15,7 +15,7 @@ export const search = (tree, fulfillCondition) => {
                 if (fulfillCondition(child)) {
                     element = child;
                 }
-            })
+            });
         } else {
             if (fulfillCondition(children)) {
                 element = children;
@@ -41,7 +41,7 @@ export const search = (tree, fulfillCondition) => {
 
         return element;
     }
-}
+};
 
 export const searchWithClass = (tree, className) => {
     return search(tree, (el) => {
@@ -55,7 +55,7 @@ export const searchWithClass = (tree, className) => {
 
         return null;
     });
-} 
+}; 
 
 export const searchWithId = (tree, id) => {
     return search(tree, (el) => {
@@ -69,4 +69,4 @@ export const searchWithId = (tree, id) => {
 
         return null;
     });
-} 
+}; 

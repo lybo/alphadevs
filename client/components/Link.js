@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react'
-import { redirect } from 'redux-router-director'
+import React, { Component, PropTypes } from 'react';
+import { redirect } from 'redux-router-director';
 
 class Link extends Component {
     constructor(props) {

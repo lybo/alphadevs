@@ -1,8 +1,8 @@
-import React, { Component, PropTypes } from 'react'
-import Link from '../Link'
-import Header from '../Header'
-import { redirect } from 'redux-router-director'
-import '!style!css!less!./style.less'
+import React, { Component, PropTypes } from 'react';
+import Link from '../Link';
+import Header from '../Header';
+import { redirect } from 'redux-router-director';
+import '!style!css!less!./style.less';
 
 class PageLayout extends React.Component {
     constructor(props) {

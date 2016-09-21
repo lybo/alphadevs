@@ -1,13 +1,13 @@
-import { jsdom } from 'jsdom'
+import { jsdom } from 'jsdom';
 
 // pass markup to js-dom to create the fake DOM and bind it to the global document
-global.document = jsdom('<!doctype html><html><head></head><body></body></html>')
+global.document = jsdom(`<!doctype html><html><head></head><body></body></html>`);
 // bind the fake window object to the global namespace
-global.window = document.defaultView
+global.window = document.defaultView;
 // bind the fake window object to the global namespace
-global.navigator = global.window.navigator
+global.navigator = global.window.navigator;
 
-const importLib = (lib = { nameSpace: '', requiredName: ''  }) => {
+const importLib = (lib = { nameSpace: ``, requiredName: ``  }) => {
     if (!lib.requiredName) {
         return;
     }
@@ -29,19 +29,19 @@ const importLibs = (libs) => {
 
 importLibs([
     {
-        nameSpace: 'moment', 
-        requiredName: 'moment'
+        nameSpace: `moment`, 
+        requiredName: `moment`
     },
     {
-        nameSpace: '$', 
-        requiredName: 'jquery'
+        nameSpace: `$`, 
+        requiredName: `jquery`
     },
     {
-        nameSpace: 'jQuery', 
-        requiredName: 'jquery'
+        nameSpace: `jQuery`, 
+        requiredName: `jquery`
     },
     {
-        requiredName: 'bootstrap-datepicker'
+        requiredName: `bootstrap-datepicker`
     }
 ]);
 

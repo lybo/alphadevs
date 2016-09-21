@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import Link from './Link'
-import { redirect } from 'redux-router-director'
+import React, { Component, PropTypes } from 'react';
+import Link from './Link';
+import { redirect } from 'redux-router-director';
 
 class LoginGitHub extends React.Component {
     constructor(props) {

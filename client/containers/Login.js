@@ -1,6 +1,6 @@
-import Login from '../components/Login'
-import { connect } from 'react-redux'
-import { fetchLogin } from '../actions/user'
+import Login from '../components/Login';
+import { connect } from 'react-redux';
+import { fetchLogin } from '../actions/user';
 
 export default connect(
     (state) => {
@@ -8,7 +8,7 @@ export default connect(
             // request: state.requests.login 
             request: {
                 status: false,
-                error: ''
+                error: ``
             }
         };
     },
@@ -17,7 +17,7 @@ export default connect(
             onSubmit: (email, password, success, fail) => {
                 dispatch(fetchLogin(email, password, success, fail));
             }
-        }
+        };
     }
 )(Login); 
 

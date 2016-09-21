@@ -7,4 +7,4 @@ export default () => {
             <ChartPie />
         </div>
     );
-}
+};
