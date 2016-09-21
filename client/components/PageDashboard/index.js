@@ -12,7 +12,7 @@ class PageDashboard extends React.Component {
 
 
     render() {
-        const { authUser, onClickLogout, fetchSkills  } = this.props;
+        const { authUser, onClickLogout, fetchSkills, updateSkills  } = this.props;
 
         return (
             <PageLayout onClickLogout={onClickLogout} authUser={authUser} >
@@ -20,6 +20,9 @@ class PageDashboard extends React.Component {
                     <div className="row">
                         <div className="col-md-10" onClick={fetchSkills}>
                             hello!
+                        </div>
+                        <div className="col-md-10" onClick={updateSkills}>
+                            ADDSKILLS!
                         </div>
                     </div>
                 </div>

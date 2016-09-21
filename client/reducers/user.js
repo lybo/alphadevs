@@ -47,6 +47,15 @@ function skills(state = initialState, action) {
             items: action.posts,
             lastUpdated: action.receivedAt
         });
+    case types.REQUEST_UPDATE_SKILLS:
+        return Object.assign({}, state, {
+            update_pending: true
+        });
+    case types.CONFIRM_UPDATE_SKILLS:
+        return Object.assign({}, state, {
+            skills: action.payload,
+            update_pending: false
+        });
     default:
         return state;
     }

@@ -136,3 +136,32 @@ export function fetchSkills(userId) {
         );
     };
 }
+
+
+//-----------Add Skills
+export function requestAddSkills() {
+    return {
+        type: types.REQUEST_UPDATE_SKILLS,
+    };
+}
+
+export function confirmAddSkills(skills) {
+    return {
+        type: types.CONFIRM_UPDATE_SKILLS,
+        payload: skills
+    };
+}
+export function updateSkills(userId, skills) {
+    return dispatch => {
+        dispatch(requestAddSkills());
+        api.updateSkills(userId, skills)
+            .catch((err) => {
+                console.log(err);
+            })
+            .then(() =>{
+                dispatch(confirmAddSkills(skills));
+                console.log(`Skills added successfully`);
+            }
+        );
+    };
+}

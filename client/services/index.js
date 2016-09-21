@@ -72,3 +72,18 @@ export function getSkills(userId) {
         });
     });
 }
+
+export function updateSkills(userId, skills) {
+    return new Promise(function(resolve, reject) {
+        dpd.users.put(userId,  {skills: skills } ,function(me, err) {
+            if (err) {
+                console.log(err);
+                reject(err);
+                return
+            }
+            else {
+                resolve();
+            }
+        });
+    });
+}
