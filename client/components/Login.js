@@ -9,26 +9,26 @@ class Login extends React.Component {
     }
 
     componentDidMount() {
-        this.email.focus();
+        this.username.focus();
     }
 
     render() {
         const { request, onSubmit } = this.props;
-        this.email = '';
+        this.username = '';
         let password = '';
         const _onSubmit = (evt) => {
             evt.preventDefault();
 
             onSubmit(
-                this.email.value, 
+                this.username.value,
                 password.value,
                 () => {
                     redirect(window.urlAttempt || '/dashboard');
                 });
-            this.email.value = '';
+            this.username.value = '';
             password.value = '';
         }
-      
+
         return !request.status ? (
             <div className="page-wrapper">
                 <div className="center-wrapper">
@@ -38,8 +38,8 @@ class Login extends React.Component {
                     </div>
                     <form className="start-form login-form" onSubmit={_onSubmit}>
                         <div className="form-group">
-                            <label htmlFor="input-email">{'Email address'}</label>
-                            <input ref="email" type="email" className="form-control input-email" id="input-email" ref={(ref) => this.email = ref}/>
+                            <label htmlFor="input-username">{'Username'}</label>
+                            <input ref="username" type="text" className="form-control input-username" id="input-username" ref={(ref) => this.username = ref}/>
                         </div>
                         <div className="form-group">
                             <label htmlFor="input-password">{'Password'}</label>
@@ -81,4 +81,3 @@ class Login extends React.Component {
 }
 
 export default Login;
-

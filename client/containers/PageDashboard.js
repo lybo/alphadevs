@@ -1,7 +1,7 @@
 import React from 'react';
 import PageDashboard from '../components/PageDashboard';
 import { connect } from 'react-redux'
-import { fetchLogout } from '../actions/user'
+import { fetchLogout, getSkills } from '../actions/user'
 
 export default connect(
     (state) => {
@@ -12,9 +12,12 @@ export default connect(
     },
     (dispatch) => {
         return {
-            onClickLogout: () => { 
+            onClickLogout: () => {
                 dispatch(fetchLogout());
+            },
+            getSkills: () => {
+                dispatch(getSkills());
             }
         }
     }
-)(PageDashboard); 
+)(PageDashboard);

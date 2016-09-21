@@ -37,6 +37,8 @@
     "bootstrap-datepicker": "^1.6.0",
     "css-loader": "^0.23.0",
     "deep-freeze": "0.0.1",
+    "eslint": "^3.4.0",
+    "eslint-plugin-react": "^6.2.0",
     "expect": "^1.8.0",
     "express": "^4.13.3",
     "jquery": "^2.2.0",
