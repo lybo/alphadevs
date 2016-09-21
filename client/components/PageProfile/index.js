@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import PageLayout from '../PageLayout'
 import Link from '../Link'
-import { redirect } from 'redux-router-director'
-import '!style!css!less!./style.less'
+import { redirect } from 'redux-router-director';
+import '!style!css!less!./style.less';
 
 class PageDashboard extends React.Component {
     constructor(props) {
@@ -11,6 +11,14 @@ class PageDashboard extends React.Component {
 
     render() {
         const { authUser, onClickLogout, fetchSkills, updateSkills  } = this.props;
+
+        const skillAttrs = [];
+
+        const state = {};
+        state.skills = [`js`, `css`];
+        state.skills.forEach((skill) => {
+            skillAttrs.push(<span className="skill">{skill}</span>);
+        });
 
         return (
             <PageLayout onClickLogout={onClickLogout} authUser={authUser} >
@@ -21,6 +29,9 @@ class PageDashboard extends React.Component {
                         </div>
                         <div className="col-md-10" onClick={updateSkills}>
                             ADDSKILLS!
+                        </div>
+                        <div>
+                            {skillAttrs}
                         </div>
                     </div>
                 </div>
