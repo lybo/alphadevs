@@ -23,7 +23,7 @@ class Header extends React.Component {
             onClickLogout();
             redirect(`/login`);
         };
-      
+
         return (
             <nav className="navbar navbar-default navbar-static-top">
                 <div className="container-fluid">
@@ -50,7 +50,7 @@ class Header extends React.Component {
                                 <ul className="dropdown-menu" role="menu">
                                     <li className="dropdown-header">SETTINGS</li>
                                     <li className="">
-                                        <Link url={'/dashboard'} > Administrator </Link>
+                                        <Link url={'/profile'} > My Page </Link>
                                     </li>
                                     <li className="">
                                         <Link url={'/dashboard'} > Administrator </Link>
@@ -71,4 +71,3 @@ class Header extends React.Component {
 }
 
 export default Header;
-

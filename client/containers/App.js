@@ -4,6 +4,7 @@ import { Router } from 'redux-router-director';
 import { auth } from '../middlewares/index';
 import PageLogin from './PageLogin';
 import PageDashboard from './PageDashboard';
+import PageProfile from './PageProfile';
 // import '!style!css!less!./main.less'
 
 const Pages = ({
@@ -20,6 +21,9 @@ const Pages = ({
             <Router pattern="/dashboard" middlewares={[auth]}>
                 <PageDashboard />
             </Router>
+            <Router pattern="/profile" middlewares={[auth]}>
+                <PageProfile />
+            </Router>
         </div>
     );
 };
@@ -27,7 +31,7 @@ const Pages = ({
 export default connect(
     (state) => {
         return {
-            router: state.router    
+            router: state.router
         };
     },
     (dispatch) => {
