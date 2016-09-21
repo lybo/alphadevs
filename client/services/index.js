@@ -25,7 +25,7 @@ export function getAuthUser() {
 export function login(email, password) {
     return new Promise(function(resolve, reject) {
         dpd.users.login({
-            'username': email, 
+            'username': email,
             'password': password
         }, function(user, err) {
             if(err) {
@@ -52,6 +52,21 @@ export function logout() {
             };
             document.cookie = 'sid=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
             resolve({});
+        }
+    });
+};
+export function getSkills(userId) {
+    return new Promise(function(resolve, reject) {
+        dpd.users.me(function(me, err) {
+            if (err) {
+                console.log(err);
+                reject(err);
+            }
+            else {
+                console.log(me);
+                console.log(userId);
+                resolve(me);
+            }
         });
     });
 }
