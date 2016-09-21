@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux'
 import { Router } from 'redux-router-director'
-// import { auth } from '../middlewares/index'
+import { auth } from '../middlewares/index'
 import PageLogin from './PageLogin'
-import PagePassive from './PagePassive'
+import PageDashboard from './PageDashboard'
 // import '!style!css!less!./main.less'
 
 const Pages = ({
@@ -11,8 +11,14 @@ const Pages = ({
 }) => {
     return (
         <div>
-            <Router pattern="" >
+            <Router pattern="/login" middlewares={[auth]}>
                 <PageLogin />
+            </Router>
+            <Router pattern="" middlewares={[auth]}>
+                <PageLogin />
+            </Router>
+            <Router pattern="/dashboard" middlewares={[auth]}>
+                <PageDashboard />
             </Router>
         </div>
     );

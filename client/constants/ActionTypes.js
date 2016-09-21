@@ -1,3 +1,4 @@
+export const REMEMBER_ME = 'REMEMBER_ME';
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
 export const RESET_PASSWORD = 'RESET_PASSWORD';
