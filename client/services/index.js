@@ -58,10 +58,11 @@ export function logout() {
 
 export function getSkills(userId) {
     return new Promise(function(resolve, reject) {
-        dpd.users.me(function(me, err) {
+        dpd.users.get(userId,function(me, err) {
             if (err) {
                 console.log(err);
                 reject(err);
+                return
             }
             else {
                 console.log(me);
