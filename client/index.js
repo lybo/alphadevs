@@ -13,6 +13,9 @@ router.setStore(store)
 
 
 const init = function init () {
+    if (!window.location.hash) {
+        window.location.href = '/#/';
+    }
     render(
         <Provider store={store}>
             <div>
@@ -22,7 +25,6 @@ const init = function init () {
         </Provider>,
         document.getElementById('root'),
         function() {
-            console.log('init');
             store.dispatch(rememberMe(router.init, router.init));
         }
     )
