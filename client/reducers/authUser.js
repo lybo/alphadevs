@@ -38,4 +38,3 @@ export default function(state = initialState, action = { type: '', payload: {} }
     }   
 };
 
-

@@ -6,7 +6,7 @@ import App from './containers/App'
 import configureStore from './store/configureStore'
 import router from 'redux-router-director'
 import DevTools from './containers/DevTools'
-import { rememberMe } from './actions/user';
+import { rememberMe } from './actions/authUser';
 
 const store = configureStore()
 router.setStore(store)
