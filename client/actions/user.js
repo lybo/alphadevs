@@ -20,7 +20,6 @@ export function logout() {
 
 //-----------REMEMBER_ME
 export function doRememberMe(data) {
-    console.log(data);
     return {
         type: types.REMEMBER_ME,
         payload: data
