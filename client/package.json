@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack --config webpack.config.production.js",
-    "test": "NODE_ENV=test mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
+    "test": "NODE_ENV=test mocha --recursive --watch --compilers js:babel-core/register --require ./test/setup.js",
     "test:watch": "npm test -- --watch",
     "wiki": "./node_modules/.bin/jsdoc index.js -c ./jsdoc.json -r"
   },
