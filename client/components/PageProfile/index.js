@@ -13,15 +13,15 @@ class PageProfile extends React.Component {
         const { skills, authUser, onClickLogout, fetchSkills, updateSkills  } = this.props;
 
         const skillAttrs = [];
-        skills.forEach((skill) => {
-            skillAttrs.push(<span className="skill">{skill}</span>);
+        skills.forEach((skill, index) => {
+            skillAttrs.push(<span key={index} className="skill">{skill}</span>);
         });
 
         return (
             <PageLayout onClickLogout={onClickLogout} authUser={authUser} >
                 <div className="container list-wrapper">
                     <div className="row">
-                        <div className="col-md-10" onClick={fetchSkills}>
+                        <div className="col-md-10" onClick={() => fetchSkills(authUser.id)}>
                             getSkills!
                         </div>
                         <div className="col-md-10" onClick={updateSkills}>

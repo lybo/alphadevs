@@ -127,7 +127,6 @@ export function receiveSkills(userId, json) {
 }
 
 export function fetchSkills(userId) {
-
     return dispatch => {
         dispatch(requestSkills(userId));
         api.getSkills(userId)

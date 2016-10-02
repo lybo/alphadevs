@@ -15,8 +15,8 @@ export default connect(
             onClickLogout: () => {
                 dispatch(fetchLogout());
             },
-            fetchSkills: () => {
-                dispatch(fetchSkills(`1ad55115c447d871`));
+            fetchSkills: (userId) => {
+                dispatch(fetchSkills(userId));
             },
             updateSkills: () => {
                 dispatch(updateSkills(`1ad55115c447d871`, [`javascript`, `html`]));
