@@ -6,7 +6,8 @@ const initialState = {
     username: ``,
     url: ``,
     skills: [],
-    isFetching: false
+    isFetching: false,
+    update_pending: false
 };
 
 function auth(state = initialState, action = { type: ``, payload: {} }) {
@@ -43,9 +44,7 @@ function skills(state = initialState, action) {
     case types.RECEIVE_SKILLS:
         return Object.assign({}, state, {
             isFetching: false,
-            didInvalidate: false,
-            items: action.posts,
-            lastUpdated: action.receivedAt
+            skills: action.skills,
         });
     case types.REQUEST_UPDATE_SKILLS:
         return Object.assign({}, state, {

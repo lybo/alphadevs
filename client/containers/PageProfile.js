@@ -7,6 +7,7 @@ export default connect(
         return {
             router: state.router,
             authUser: state.authUser,
+            skills: state.user.skills.skills
         };
     },
     (dispatch) => {

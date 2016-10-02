@@ -3,7 +3,7 @@ module.exports = {
         "browser": true,
         "es6": true
     },
-    "extends": "eslint:recommended",
+    "extends": ['eslint:recommended', 'plugin:react/recommended'],
     "parserOptions": {
         "ecmaFeatures": {
             "experimentalObjectRestSpread": true,
@@ -32,7 +32,10 @@ module.exports = {
             "always"
         ],
         "no-console": [
-            "warn"
+            "off"
+        ],
+        "react/prop-types": [
+            0
         ]
     }
 };

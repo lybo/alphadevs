@@ -35,7 +35,6 @@ export function login(email, password) {
             }
             dpd.users.me(function(me) {
                 me.email = me.username;
-                console.log(me);
                 resolve(me);
             });
         });
@@ -62,11 +61,9 @@ export function getSkills(userId) {
             if (err) {
                 console.log(err);
                 reject(err);
-                return
+                return;
             }
             else {
-                console.log(me);
-                console.log(userId);
                 resolve(me);
             }
         });
@@ -79,7 +76,7 @@ export function updateSkills(userId, skills) {
             if (err) {
                 console.log(err);
                 reject(err);
-                return
+                return;
             }
             else {
                 resolve();
