@@ -3,7 +3,7 @@
 	"usersCollection": "",
 	"SALT_LEN": "",
 	"baseURL": "http://localhost:5000",
-	"allowedRedirectURLs": "^http://localhost:3000/#/dashboard$",
+	"allowedRedirectURLs": "^http://localhost:3000/.*$",
 	"disableSessionId": true,
 	"disableReturnParams": true,
 	"allowLocal": false,

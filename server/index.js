@@ -37,6 +37,12 @@ require('deployd').attach(server, {
 app.use(server.handleRequest);
 
 
+
+app.get('/dashboard', function(req, res) {
+    res.redirect('/#/dashboard');
+});
+
+
 // start server
 server.listen(PORT, function() {
     console.log("Server is listening on " + PORT);
