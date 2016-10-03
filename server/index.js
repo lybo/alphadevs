@@ -22,6 +22,16 @@ require('deployd').attach(server, {
     }
 });
 
+// io.on('connection', function (socket) {
+//     console.log('start');
+//     socket.on('user:update', function (data) {
+//         console.log('user:update', data); // emit()ed from the server
+//     });
+//     setTimeout(function () {
+//         socket.emit('user:update', 'test');
+//     }, 500);
+// });
+
 
 // After attach, express can use server.handleRequest as middleware
 app.use(server.handleRequest);

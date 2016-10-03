@@ -1,0 +1,1 @@
+emit('tags:remove', this);

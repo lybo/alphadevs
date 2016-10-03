@@ -20,7 +20,7 @@ export default function(state = initialState, action = { type: '', payload: {} }
                 name: action.payload.name,
                 avatar: action.payload.avatar,
                 role: action.payload.role,
-                skills: action.payload.role,
+                skills: action.payload.skills,
             };
         case types.LOGIN:
             return {
@@ -37,6 +37,11 @@ export default function(state = initialState, action = { type: '', payload: {} }
                 avatar: '',
                 role: '',
                 skills: [],
+            };
+        case types.USER_UPDATE:
+            return {
+                ...state,
+                skills: action.payload.skills,
             };
         case types.USER_ADD_SKILL:
             return {

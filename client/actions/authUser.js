@@ -1,21 +1,38 @@
-/**
- * Actions for user.
- * @module actions/user
- */
-
 import * as types from '../constants/ActionTypes'
 import * as api from '../services/index'
 import * as requests from './requests'
 
-/**
- * Action logout for user. 
- * @function
- * @return {Object} a property "type""
- */
 export function logout() {
     return {
         type: types.LOGOUT
     }   
+}
+
+//-----------USER_UPDATE
+export function getUpdatedAuthUser(data) {
+    return {
+        type: types.USER_UPDATE,
+        payload: data
+    }   
+}
+
+export function updateAuthUser(user, success, fail) {
+
+    return dispatch => {
+        api.updateAuthUser(user)
+            .then((data) => {
+                if (data.error) {
+                    fail && fail();
+                } else {
+                    dispatch(getUpdatedAuthUser(data)); 
+                    success && success(data);
+                } 
+            })
+            .catch((error) => {
+                console.error(error);
+                fail && fail();
+            });
+    }
 }
 
 //-----------REMEMBER_ME
