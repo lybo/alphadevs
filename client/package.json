@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "build": "webpack --config webpack.config.production.js",
-    "test": "NODE_ENV=test mocha --recursive --compilers js:babel-core/register --require ./test/setup.js",
+    "test": "NODE_ENV=test mocha --recursive --watch --compilers js:babel-core/register --require ./test/setup.js",
     "test:watch": "npm test -- --watch",
     "wiki": "./node_modules/.bin/jsdoc index.js -c ./jsdoc.json -r"
   },
@@ -25,6 +25,7 @@
     "react-autocomplete": "^0.1.4",
     "react-dom": "^0.14.0",
     "react-redux": "^4.0.4",
+    "react-tag-input": "^4.3.3",
     "redux": "^3.0.0",
     "redux-router-director": "^1.0.0",
     "redux-thunk": "^1.0.3"

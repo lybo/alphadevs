@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import router from 'redux-router-director'
-import user from './user'
+import authUser from './authUser'
+import tags from './tags'
 
 export default combineReducers({
     router: router.reducer,
-    user
+    authUser,
+    tags
 });
