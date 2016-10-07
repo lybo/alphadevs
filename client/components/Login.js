@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react'
-import Link from './Link'
+import React, { Component, PropTypes } from "react";
+import Link from "./Link";
 // import Spinner from './Spinner'
-import { redirect } from 'redux-router-director'
+import { redirect } from "redux-router-director";
 
 class Login extends React.Component {
     constructor(props) {
@@ -14,8 +14,8 @@ class Login extends React.Component {
 
     render() {
         const { request, onSubmit } = this.props;
-        this.username = '';
-        let password = '';
+        this.username = "";
+        let password = "";
         const _onSubmit = (evt) => {
             evt.preventDefault();
 
@@ -23,11 +23,11 @@ class Login extends React.Component {
                 this.username.value,
                 password.value,
                 () => {
-                    redirect(window.urlAttempt || '/dashboard');
+                    redirect(window.urlAttempt || "/dashboard");
                 });
-            this.username.value = '';
-            password.value = '';
-        }
+            this.username.value = "";
+            password.value = "";
+        };
 
         return !request.status ? (
             <div className="page-wrapper">
@@ -46,11 +46,11 @@ class Login extends React.Component {
                             <input ref="password" type="password" className="form-control input-password" id="input-password" ref={(ref) => password = ref}/>
                         </div>
 
-                        {request.error !== '' ? (
+                        {request.error !== "" ? (
                             <div className="bg-danger">
                                 { request.error }
                             </div>
-                        ) : ( '' )}
+                        ) : ( "" )}
 
                         <div className="start-bottom">
                             <div className="start-info">

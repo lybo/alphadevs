@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react'
-import Link from '../Link'
-import { redirect } from 'redux-router-director'
-import '!style!css!less!./style.less'
+import React, { Component, PropTypes } from "react";
+import Link from "../Link";
+import { redirect } from "redux-router-director";
+import "!style!css!less!./style.less";
 
 class Header extends React.Component {
     constructor(props) {
@@ -10,9 +10,9 @@ class Header extends React.Component {
 
     componentDidMount() {
         $(function () {
-            $('.navbar-toggle-sidebar').click(function () {
-                $('.navbar-nav').toggleClass('slide-in');
-                $('.side-body').toggleClass('body-slide-in');
+            $(".navbar-toggle-sidebar").click(function () {
+                $(".navbar-nav").toggleClass("slide-in");
+                $(".side-body").toggleClass("body-slide-in");
             });
         });
     }
@@ -21,8 +21,8 @@ class Header extends React.Component {
         const { onClickLogout, authUser } = this.props;
         const _onClickLogout = () => {
             onClickLogout();
-            redirect('/login');
-        }
+            redirect("/login");
+        };
       
         return (
             <nav className="navbar navbar-default navbar-static-top">

@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react'
-import { WithContext as ReactTags } from 'react-tag-input';
-import '!style!css!less!./style.less'
+import React, { Component, PropTypes } from "react";
+import { WithContext as ReactTags } from "react-tag-input";
+import "!style!css!less!./style.less";
 
 class Tags extends React.Component {
     constructor(props) {
@@ -52,7 +52,7 @@ class Tags extends React.Component {
         const uniqueArray = (el,i,a) => {
             if(i==a.indexOf(el)) return 1;
             return 0;
-        }
+        };
       
         return (
             <div className="tags">

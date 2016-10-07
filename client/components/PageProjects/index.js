@@ -5,7 +5,7 @@ import Tags from "../Tags";
 import { redirect } from "redux-router-director";
 import "!style!css!less!./style.less";
 
-class PageProfile extends React.Component {
+class PageProjects extends React.Component {
     constructor(props) {
         super(props);
         const { authUser } = this.props;
@@ -32,7 +32,7 @@ class PageProfile extends React.Component {
 
     onChangeTags(tags) {
         const { authUser } = this.props;
-        const skills = tags.map(tag => tag.text); 
+        const skills = tags.map(tag => tag.text);
         this.setState({
             modifiedSkills: this.hasChanged(skills, authUser.skills),
             skills,
@@ -64,7 +64,7 @@ class PageProfile extends React.Component {
                 });
 
                 this.addNewTag(newSkills);
-                
+
                 this.setState({
                     modifiedSkills: false,
                 });
@@ -82,23 +82,23 @@ class PageProfile extends React.Component {
                     <div className="row">
                         <div className="col-md-10">
                             {authUser.name}
-                            <Tags 
-                                tags={authUser.skills} 
+                            <Tags
+                                tags={authUser.skills}
                                 suggestions={tags.map((tag) => tag.name)}
                                 onChangeData={this.onChangeTags.bind(this)} />
                             {modifiedSkills ? (
                                 <button type="button" className="btn btn-default" onClick={this.onUserChange()}>Save</button>
                             ) : (
                                 ""
-                            )} 
+                            )}
 
                         </div>
                     </div>
                 </div>
-            </PageLayout>        
+            </PageLayout>
         );
     }
 }
 
-export default PageProfile;
+export default PageProjects;
 
