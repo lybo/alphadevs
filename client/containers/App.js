@@ -4,6 +4,7 @@ import { Router } from 'redux-router-director'
 import { auth } from '../middlewares/index'
 import PageLogin from './PageLogin'
 import PageDashboard from './PageDashboard'
+import PageProfile from './PageProfile'
 // import '!style!css!less!./main.less'
 
 const Pages = ({
@@ -15,10 +16,13 @@ const Pages = ({
                 <PageLogin />
             </Router>
             <Router pattern="" middlewares={[auth]}>
-                <PageLogin />
+                <PageDashboard />
             </Router>
             <Router pattern="/dashboard" middlewares={[auth]}>
                 <PageDashboard />
+            </Router>
+            <Router pattern="/profile" middlewares={[auth]}>
+                <PageProfile />
             </Router>
         </div>
     );

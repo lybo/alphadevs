@@ -6,13 +6,18 @@ import App from './containers/App'
 import configureStore from './store/configureStore'
 import router from 'redux-router-director'
 import DevTools from './containers/DevTools'
-import { rememberMe } from './actions/user';
+import services from './services'
+import { rememberMe } from './actions/authUser';
+import { getTags, subscribeTag } from './actions/tags';
 
 const store = configureStore()
 router.setStore(store)
 
 
 const init = function init () {
+    if (!window.location.hash) {
+        window.location.href = '/#/';
+    }
     render(
         <Provider store={store}>
             <div>
@@ -22,8 +27,10 @@ const init = function init () {
         </Provider>,
         document.getElementById('root'),
         function() {
-            console.log('init');
             store.dispatch(rememberMe(router.init, router.init));
+            store.dispatch(getTags(() => {
+                store.dispatch(subscribeTag());
+            }));
         }
     )
 }

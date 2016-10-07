@@ -1,0 +1,1 @@
+emit('tags:add', this); 

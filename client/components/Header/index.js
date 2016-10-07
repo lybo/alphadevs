@@ -48,10 +48,10 @@ class Header extends React.Component {
                                     <span className="caret"></span>
                                 </a>
                                 <ul className="dropdown-menu" role="menu">
-                                    <li className="dropdown-header">SETTINGS</li>
                                     <li className="">
-                                        <Link url={'/dashboard'} > Administrator </Link>
+                                        <Link url={'/profile'}>{'Profile'}</Link>
                                     </li>
+                                    <li className="dropdown-header">Teams</li>
                                     <li className="">
                                         <Link url={'/dashboard'} > Administrator </Link>
                                     </li>

@@ -1,7 +1,7 @@
 import React from 'react';
 import PageDashboard from '../components/PageDashboard';
 import { connect } from 'react-redux'
-import { fetchLogout } from '../actions/user'
+import { fetchLogout } from '../actions/authUser'
 
 export default connect(
     (state) => {
