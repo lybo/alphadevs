@@ -1,8 +1,6 @@
-import React, { Component, PropTypes } from "react";
+import React from "react";
 import PageLayout from "../PageLayout";
-import Link from "../Link";
 import Tags from "../Tags";
-import { redirect } from "redux-router-director";
 import "!style!css!less!./style.less";
 
 class PageProjects extends React.Component {
@@ -50,7 +48,7 @@ class PageProjects extends React.Component {
     }
 
     onUserChange() {
-        const { authUser, onUserChange, tags, addTag } = this.props;
+        const { authUser, onUserChange, tags } = this.props;
         const { skills } = this.state;
         return (evt) => {
             evt.preventDefault();
@@ -74,7 +72,7 @@ class PageProjects extends React.Component {
 
     render() {
         const { modifiedSkills } = this.state;
-        const { authUser, onClickLogout, tags, onUserChange } = this.props;
+        const { authUser, onClickLogout, tags } = this.props;
 
         return (
             <PageLayout onClickLogout={onClickLogout} authUser={authUser} >
