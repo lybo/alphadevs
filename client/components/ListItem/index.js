@@ -8,7 +8,7 @@ class ListItem extends React.Component {
 
     render() {
         return (
-            <li>
+            <li onClick={this.props.onClickEvent}>
                 <div className="listItem">
                     <div className="name">
                         {this.props.name}

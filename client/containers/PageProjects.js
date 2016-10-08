@@ -7,8 +7,8 @@ export default connect(
             router: state.router,
             authUser: state.authUser,
             projects: [
-                {name: "test1"},
-                {name: "test2"}
+                {name: "test1", id: 1},
+                {name: "test2", id: 2}
             ]
         };
     },

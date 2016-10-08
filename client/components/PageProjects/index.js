@@ -1,6 +1,7 @@
 import React from "react";
 import PageLayout from "../PageLayout";
 import ListItem from "../ListItem";
+import { redirect } from "redux-router-director";
 import "!style!css!less!./style.less";
 
 class PageProjects extends React.Component {
@@ -14,8 +15,11 @@ class PageProjects extends React.Component {
 
     render() {
         const { authUser, onClickLogout } = this.props;
+        const goToDetailPage = (id) => {
+            redirect(`projects/${id}`);
+        };
         const projectTemplates = this.state.projects.map( (project, index) => {
-            return <ListItem key={index} name={project.name}/>;
+            return <ListItem key={index} name={project.name} onClickEvent={() => goToDetailPage(project.id)}/>;
         });
 
         return (
