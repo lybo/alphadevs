@@ -15,8 +15,9 @@ export default connect(
             onClickLogout: () => {
                 dispatch(fetchLogout());
             },
-            onProjectUpdate: () => {
+            onProjectUpdate: (project) => {
                 console.log("updating project");
+                console.log(project);
             },
             getProject: () => {
                 return {

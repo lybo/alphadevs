@@ -52,6 +52,7 @@
     "node-libs-browser": "^0.5.2",
     "raw-loader": "^0.5.1",
     "react-addons-test-utils": "^0.14.0",
+    "react-forms": "^2.0.0-beta33",
     "react-redux": "^4.0.4",
     "react-transform-hmr": "^1.0.0",
     "redux-devtools": "^3.0.0",

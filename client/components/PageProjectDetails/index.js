@@ -1,24 +1,36 @@
 import React from "react";
 import PageLayout from "../PageLayout";
 import "!style!css!less!./style.less";
+import {Fieldset, Field, createValue} from "react-forms";
 
 class PageProjectDetails extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            project: this.props.getProject()
-        };
+        let formValue = createValue({
+            value: props.getProject(),
+            onChange: this.onChange.bind(this)
+        });
+        this.state = {formValue};
+    }
+
+    onChange(formValue) {
+        this.setState({formValue});
     }
 
 
     render() {
-        const { authUser, onClickLogout } = this.props;
+        const { authUser, onClickLogout, onProjectUpdate } = this.props;
 
         return (
             <PageLayout onClickLogout={onClickLogout} authUser={authUser} >
-                <h3 className="projectName">{this.state.project.name}</h3>
-                <p className="projectDesc">{this.state.project.description}</p>
-                <a className="projectUrl" href={this.state.project.url}>{this.state.project.url}</a>
+                <Fieldset formValue={this.state.formValue}>
+                    <Field select="name" label="Name" />
+                    <Field select="description" label="description" />
+                    <Field select="url" label="url" />
+                </Fieldset>
+                <button onClick={ () => onProjectUpdate(this.state.formValue.value)}>
+                    Save Changes
+                </button>
             </PageLayout>
         );
     }
