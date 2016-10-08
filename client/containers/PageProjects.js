@@ -14,6 +14,9 @@ export default connect(
     },
     () => {
         return {
+            onDelete: (projectId) => {
+                console.log(`removing ${projectId}`);
+            }
         };
     }
 )(PageProjects);

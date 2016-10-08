@@ -19,7 +19,7 @@ class PageProjects extends React.Component {
             redirect(`projects/${id}`);
         };
         const projectTemplates = this.state.projects.map( (project, index) => {
-            return <ListItem key={index} name={project.name} onClickEvent={() => goToDetailPage(project.id)}/>;
+            return <ListItem key={index} name={project.name} onClickEvent={() => goToDetailPage(project.id)} onDelete={() => this.props.onDelete(project.id)}/>;
         });
 
         return (
