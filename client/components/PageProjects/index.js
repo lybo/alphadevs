@@ -11,14 +11,11 @@ class PageProjects extends React.Component {
         };
     }
 
-    projectTemplates() {
-        return this.state.projects.map( (project) => {
-            return <li>{project.name}</li>;
-        });
-    }
-
     render() {
         const { authUser, onClickLogout } = this.props;
+        const projectTemplates = this.state.projects.map( (project) => {
+            return <li>{project.name}</li>;
+        });
 
         return (
             <PageLayout onClickLogout={onClickLogout} authUser={authUser} >
@@ -26,7 +23,7 @@ class PageProjects extends React.Component {
                     <div className="row">
                         <div className="col-md-10">
                             <ul>
-                                {this.projectTemplates()}
+                                {projectTemplates}
                             </ul>
                         </div>
                     </div>
