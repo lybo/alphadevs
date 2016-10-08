@@ -15,7 +15,7 @@ class PageProjects extends React.Component {
     render() {
         const { authUser, onClickLogout } = this.props;
         const projectTemplates = this.state.projects.map( (project) => {
-            return <ListItem data={project.name} />;
+            return <ListItem name={project.name} />;
         });
 
         return (

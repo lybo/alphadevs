@@ -6,6 +6,7 @@ import PageLogin from "./PageLogin";
 import PageDashboard from "./PageDashboard";
 import PageProfile from "./PageProfile";
 import PageProjects from "./PageProjects";
+import PageProjectDetails from "./PageProjectDetails";
 // import '!style!css!less!./main.less'
 
 const Pages = () => {
@@ -25,6 +26,9 @@ const Pages = () => {
             </Router>
             <Router pattern="/projects" middlewares={[auth]}>
                 <PageProjects />
+            </Router>
+            <Router pattern="/projects/:id" middlewares={[auth]}>
+                <PageProjectDetails />
             </Router>
         </div>
     );
