@@ -1,5 +1,6 @@
 import React from "react";
 import PageLayout from "../PageLayout";
+import ListItem from "../ListItem";
 import "!style!css!less!./style.less";
 
 class PageProjects extends React.Component {
@@ -14,7 +15,7 @@ class PageProjects extends React.Component {
     render() {
         const { authUser, onClickLogout } = this.props;
         const projectTemplates = this.state.projects.map( (project) => {
-            return <li>{project.name}</li>;
+            return <ListItem data={project.name} />;
         });
 
         return (
