@@ -7,6 +7,7 @@ export default connect(
         return {
             router: state.router,
             authUser: state.authUser,
+            //TODO: we need to get the id of the project that will be edited or if a new one will be created
             projectId: 1
             //projectId: "new"
         };
