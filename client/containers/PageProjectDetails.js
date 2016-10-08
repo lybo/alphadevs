@@ -8,6 +8,7 @@ export default connect(
             router: state.router,
             authUser: state.authUser,
             projectId: 1
+            //projectId: "new"
         };
     },
     (dispatch) => {
@@ -19,12 +20,16 @@ export default connect(
                 console.log("updating project");
                 console.log(project);
             },
-            getProject: () => {
-                return {
-                    name: "test project",
-                    description: "most awesome project ever",
-                    url: "www.crazyproject.com"
-                };
+            getProject: (projectId) => {
+                if (projectId === "new"){
+                    return {};
+                } else {
+                    return {
+                        name: "test project",
+                        description: "most awesome project ever",
+                        url: "www.crazyproject.com"
+                    };
+                }
             }
         };
     }

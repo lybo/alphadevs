@@ -30,6 +30,7 @@ class PageProjects extends React.Component {
                             <ul>
                                 {projectTemplates}
                             </ul>
+                            <button onClick={() => redirect("projects/new")}> Create new Project </button>
                         </div>
                     </div>
                 </div>

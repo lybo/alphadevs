@@ -7,7 +7,7 @@ class PageProjectDetails extends React.Component {
     constructor(props) {
         super(props);
         let formValue = createValue({
-            value: props.getProject(),
+            value: props.getProject(props.projectId),
             onChange: this.onChange.bind(this)
         });
         this.state = {formValue};
